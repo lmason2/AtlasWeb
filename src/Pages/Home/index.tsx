@@ -1,10 +1,24 @@
 import * as React from "react"
 import LandingPage from "../LandingPage";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import MyTeam from "../MyTeam";
+import TrainingHome from "../MyTraining";
+import WeightsHome from "../MyWeights";
 
 const Home = (props: any) => {
 
-    return <>{props.authenticated ? <MyTeam /> : <LandingPage />}</>;
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/team" element={<MyTeam />} />
+          <Route path="/training" element={<TrainingHome />} />
+          <Route path="/weights" element={<WeightsHome />} />
+          {/* <Route path="/account" element={<Account />} />
+        <Route path="/messages" element={<MyMessages />} /> */}
+        </Routes>
+      </Router>
+    );
 }
 
 export default Home;

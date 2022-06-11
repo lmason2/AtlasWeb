@@ -2,7 +2,7 @@ import { ArrowUpward } from "@mui/icons-material";
 import * as React from "react"
 import { ColumnContainer, GenericButton, RowContainer } from "../Shared/shared.styled";
 import { CardHeaderTypography } from "../Shared/typography.styled";
-import { MessageBoardContainer, MessageContainer, MessageInput } from "./messageBoard.styled";
+import { MessageBoardContainer, MessageContainer, MessageInput, MessagePill, Message } from "./messageBoard.styled";
 
 const MessageBoard = () => {
     return (
@@ -10,12 +10,13 @@ const MessageBoard = () => {
         <CardHeaderTypography>Messages</CardHeaderTypography>
         <MessageContainer>
             <ColumnContainer>
-            <p>Testing</p>
-            <p>Testing</p>
-            <p>Testing</p>
-            <p>Testing</p>
-            <p>Testing</p>
-            <p>Testing</p>
+            <MessagePill incoming={true}><Message>Short message</Message></MessagePill>
+            <MessagePill incoming={false}><Message>Medium response that is two lines</Message></MessagePill>
+            <MessagePill incoming={true}><Message>Let's test a longer message that is more than just one line once we set the width</Message></MessagePill>
+            <MessagePill incoming={false}><Message>Lorem Ipsum is simply dummy text of the printing</Message></MessagePill>
+            <MessagePill incoming={true}><Message>and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of</Message></MessagePill>
+            <MessagePill incoming={false}><Message>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software</Message></MessagePill>
+            <MessagePill incoming={true}><Message>like Aldus PageMaker including versions of Lorem Ipsum.</Message></MessagePill>
             </ColumnContainer>
         </MessageContainer>
         <RowContainer justifyContent="start">

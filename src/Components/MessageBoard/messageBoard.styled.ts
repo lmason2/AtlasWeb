@@ -15,9 +15,10 @@ const MessageBoardContainer = styled.div`
 const MessageContainer = styled.div`
     background-color: rgb(228, 209, 185, 0.5);
     margin-top: 10px;
-    height: 85%;
+    padding: 10px 0px 10px 0px;
+    height: 80%;
     border-radius: 10px;
-
+    overflow: scroll;
 `;
 
 const MessageInput = styled.input`
@@ -36,9 +37,29 @@ const MessageInput = styled.input`
   }
 `;
 
-const MessagePill = styled.div`
-
-
+const MessagePill = styled.div<{
+    incoming: boolean
+}>`
+margin: ${({incoming}) => incoming ? `5px auto 5px 10px` : `5px 10px 5px auto`};
+width: fit-content;
+max-width: 100px;
+border-radius: 20px;
+background-color: ${({incoming}) => incoming? `black` : `white`};
+color: ${({incoming}) => incoming? `white` : `black`};
+padding: 5px 20px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 `;
 
-export { MessageBoardContainer, MessageContainer, MessageInput, MessagePill };
+const Message = styled.p`
+font-family: Ubuntu, sans-serif;
+font-size: 12px;
+margin: 0px;
+`;
+
+export {
+  MessageBoardContainer,
+  MessageContainer,
+  MessageInput,
+  MessagePill,
+  Message,
+};

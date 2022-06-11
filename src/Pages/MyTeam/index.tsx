@@ -278,25 +278,25 @@ const MyTeam = () => {
     return (
       <MyTeamContainer>
         <MyHeaderTypography>Arizona State University</MyHeaderTypography>
-        <div style={{display: "flex", flexWrap: "nowrap"}}>
-        <RowContainer>
-          <>
-            {teamData
-              .sort(function (a, b) {
-                return b.data.length - a.data.length;
-              })
-              .map(function (data: any) {
-                return (
-                  <Card margin="20px 30px">
-                    <CardHeaderTypography>{data.name}</CardHeaderTypography>
-                    <StyledHR />
-                    <CardData data={data.data} />
-                  </Card>
-                );
-              })}
-          </>
-        </RowContainer>
-        <MessageBoard />
+        <div style={{ display: "flex", flexWrap: "nowrap" }}>
+          <RowContainer>
+            <>
+              {teamData
+                .sort(function (a, b) {
+                  return b.data.length - a.data.length;
+                })
+                .map(function (data: any) {
+                  return (
+                    <Card margin="20px 30px">
+                      <CardHeaderTypography>{data.name}</CardHeaderTypography>
+                      <StyledHR />
+                      <CardData data={data.data} />
+                    </Card>
+                  );
+                })}
+            </>
+          </RowContainer>
+          <MessageBoard />
         </div>
       </MyTeamContainer>
     );

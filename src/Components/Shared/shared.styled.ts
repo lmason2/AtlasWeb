@@ -23,7 +23,6 @@ padding: ${({padding}) => padding || "0px"};
 const ColumnContainer = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: center;
 `;
 
 const RowContainer = styled.div<{
