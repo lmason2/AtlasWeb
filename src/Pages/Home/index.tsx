@@ -4,6 +4,7 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import MyTeam from "../MyTeam";
 import TrainingHome from "../MyTraining";
 import WeightsHome from "../MyWeights";
+import Feed from "../Feed";
 
 const Home = (props: any) => {
 
@@ -14,6 +15,7 @@ const Home = (props: any) => {
           <Route path="/team" element={<MyTeam />} />
           <Route path="/training" element={<TrainingHome />} />
           <Route path="/weights" element={<WeightsHome />} />
+          <Route path="/feed" element={<Feed />} />
           {/* <Route path="/account" element={<Account />} />
         <Route path="/messages" element={<MyMessages />} /> */}
         </Routes>

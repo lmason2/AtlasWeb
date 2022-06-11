@@ -7,6 +7,7 @@ import { MyTrainingContainer } from "./MyTraining.styled";
 
 const TrainingHome = () => {
     const date = new Date().toLocaleDateString();
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     const training = [
         {
             name: "Today",
@@ -14,9 +15,6 @@ const TrainingHome = () => {
                 {
                     key: 0,
                     data: [
-                        {
-                            text: new Date(2022, 5, 11).toLocaleString().split(',')[0]
-                        },
                         {
                             text: "9"
                         },
@@ -34,7 +32,7 @@ const TrainingHome = () => {
                     key: 0,
                     data: [
                         {
-                            text: new Date(2022, 5, 11).toLocaleString().split(',')[0]
+                            text: weekday[new Date(2022, 5, 11).getDay()]
                         },
                         {
                             text: "9"
@@ -48,7 +46,7 @@ const TrainingHome = () => {
                     key: 1,
                     data: [
                         {
-                            text: new Date(2022, 5, 10).toLocaleString().split(',')[0]
+                            text: weekday[new Date(2022, 5, 10).getDay()]
                         },
                         {
                             text: "7"
@@ -62,7 +60,7 @@ const TrainingHome = () => {
                     key: 2,
                     data: [
                         {
-                            text: new Date(2022, 5, 9).toLocaleString().split(',')[0]
+                            text: weekday[new Date(2022, 5, 9).getDay()]
                         },
                         {
                             text: "4"
@@ -76,7 +74,7 @@ const TrainingHome = () => {
                     key: 3,
                     data: [
                         {
-                            text: new Date(2022, 5, 8).toLocaleString().split(',')[0]
+                            text: weekday[new Date(2022, 5, 8).getDay()]
                         },
                         {
                             text: "8"
@@ -90,7 +88,7 @@ const TrainingHome = () => {
                     key: 4,
                     data: [
                         {
-                            text: new Date(2022, 5, 7).toLocaleString().split(',')[0]
+                            text: weekday[new Date(2022, 5, 7).getDay()]
                         },
                         {
                             text: "4"
@@ -104,7 +102,7 @@ const TrainingHome = () => {
                     key: 5,
                     data: [
                         {
-                            text: new Date(2022, 5, 6).toLocaleString().split(',')[0]
+                            text: weekday[new Date(2022, 5, 6).getDay()]
                         },
                         {
                             text: "7"

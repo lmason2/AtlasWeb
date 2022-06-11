@@ -3,6 +3,7 @@ import { GenericButton } from "../Shared/shared.styled";
 import Burger from "./Hamburger";
 import Menu from "./Menu";
 import { NavbarContainer, NavbarTypography } from "./navbar.styled";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 const Navbar = (props: any) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -23,7 +24,11 @@ const Navbar = (props: any) => {
             <Menu open={open} setOpen={setOpen} />
           </div>
         )}
-        <NavbarTypography open={open}>Atlas</NavbarTypography>
+        <Router>
+          <NavbarTypography open={open}>
+            <Link to="/feed" style={{textDecoration: "none", color: "inherit"}}>Atlas </Link>
+          </NavbarTypography>
+        </Router>
 
         <GenericButton>
           {props.authenticated ? `Sign Out` : `Sign In`}
