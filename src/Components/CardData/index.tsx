@@ -12,6 +12,7 @@ const CardData = (props: any) => {
             return props.data;
         } 
         else {
+          console.log(props.data);
             return props.data.slice(0,7);
         }
     }
