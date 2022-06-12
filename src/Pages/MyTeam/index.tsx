@@ -296,7 +296,7 @@ const MyTeam = () => {
                 })}
             </>
           </RowContainer>
-          <MessageBoard />
+          <MessageBoard title={"Messages"}/>
         </div>
       </MyTeamContainer>
     );

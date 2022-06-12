@@ -14,6 +14,7 @@ const MessageBoardContainer = styled.div`
 
 const MessageContainer = styled.div`
     background-color: rgb(228, 209, 185, 0.5);
+    border: 1px solid ${props => props.theme.palette.primary.main};
     margin-top: 10px;
     padding: 10px 0px 10px 0px;
     height: 80%;

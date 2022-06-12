@@ -4,10 +4,10 @@ import { ColumnContainer, GenericButton, RowContainer } from "../Shared/shared.s
 import { CardHeaderTypography } from "../Shared/typography.styled";
 import { MessageBoardContainer, MessageContainer, MessageInput, MessagePill, Message } from "./messageBoard.styled";
 
-const MessageBoard = () => {
+const MessageBoard = (props: any) => {
     return (
       <MessageBoardContainer>
-        <CardHeaderTypography>Messages</CardHeaderTypography>
+        <CardHeaderTypography>{props.title}</CardHeaderTypography>
         <MessageContainer>
             <ColumnContainer>
             <MessagePill incoming={true}><Message>Short message</Message></MessagePill>
